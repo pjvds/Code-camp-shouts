@@ -82,6 +82,9 @@
       <DependentUpon>ReadModel.dbml</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="CreateReadModel.sql" />
+  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

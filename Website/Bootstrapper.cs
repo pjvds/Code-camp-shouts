@@ -4,6 +4,7 @@ using Ncqrs.Commanding.ServiceModel;
 using Ncqrs.Eventing.ServiceModel.Bus;
 using Ncqrs.Eventing.Storage;
 using Ncqrs.Eventing.Storage.SQL;
+using Ncqrs.Commanding.CommandExecution.Mapping.Attributes;
 
 namespace Website
 {

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
+using ReadModel;
 
 namespace Website.Controllers
 {
@@ -7,7 +9,10 @@ namespace Website.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            using(var context = new ReadModelDataContext())
+            {
+                return View(context.NoteItems.ToList());
+            }
         }
     }
 }
