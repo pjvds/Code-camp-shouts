@@ -1,0 +1,36 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Commands.ChangeNoteTextCommand>
+
+@{
+    View.Title = "Edit";
+    LayoutPage = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+    @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
+        
+        <fieldset>
+            <legend>Fields</legend>
+            
+			@Html.HiddenFor(model => model.NoteId)
+            
+            <div class="editor-label">
+                @Html.LabelFor(model => model.NewText)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.NewText)
+                @Html.ValidationMessageFor(model => model.NewText)
+            </div>
+            
+            <p>
+                <input type="submit" value="Save" />
+            </p>
+        </fieldset>
+
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+
